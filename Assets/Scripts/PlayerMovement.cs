@@ -1,7 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerMovement : MonoBehaviour
@@ -52,5 +50,12 @@ public class PlayerMovement : MonoBehaviour
             playerScale.x *= -1; 
             transform.localScale = playerScale;
         }
+
+        //loads menu if esc is pressed
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
     }
 }
