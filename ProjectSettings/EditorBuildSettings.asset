@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prefabs/Scenes/ClockTower.unity
     guid: f51e0647ed398574cb797b1f893e1d25
+  - enabled: 1
+    path: Assets/Prefabs/Scenes/Credits.unity
+    guid: c2057586e88b9ae419e3be5eb6015600
+  - enabled: 1
+    path: Assets/Prefabs/Scenes/Death.unity
+    guid: 15efa1ffdbc17254dac9940e7b44bd95
+  - enabled: 1
+    path: Assets/Prefabs/Scenes/Victory.unity
+    guid: 8f241183da87b9b4cae8d60a3da22965
   m_configObjects: {}

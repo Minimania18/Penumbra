@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -33,6 +34,15 @@ public class PlayerStats : MonoBehaviour
         currentHealth = Mathf.Max(currentHealth, 0);
         // Update the health UI
         healthUI.UpdateHealth(currentHealth);
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+    public void Die()
+    {
+        // Load the death screen scene
+        SceneManager.LoadScene("Death");
     }
 
     public void Heal(int healAmount)
