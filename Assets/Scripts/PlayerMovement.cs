@@ -61,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
         //loads menu if esc is pressed
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            //ResetSpawnPointToDefault();
             SceneManager.LoadScene("Menu");
         }
 

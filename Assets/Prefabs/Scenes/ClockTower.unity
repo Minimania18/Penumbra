@@ -5199,7 +5199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4757529925453021655, guid: 0941150580fa8dc4cbd3bb9879a0b9be, type: 3}
       propertyPath: m_Name
-      value: LevelChanger
+      value: ClockTowerEntrance
       objectReference: {fileID: 0}
     - target: {fileID: 8099057810119333678, guid: 0941150580fa8dc4cbd3bb9879a0b9be, type: 3}
       propertyPath: m_LocalScale.x

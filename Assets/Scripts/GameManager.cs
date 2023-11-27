@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        ResetSpawnPointToDefault();
         if (Instance == null)
         {
             Instance = this;
@@ -46,5 +47,10 @@ public class GameManager : MonoBehaviour
     {
         PlayerPrefs.SetString("NextSpawnPoint", spawnPointName);
         SceneManager.LoadScene(sceneName);
+    }
+    public void ResetSpawnPointToDefault()
+    {
+        // Set the default spawn point name
+        PlayerPrefs.SetString("NextSpawnPoint", "DefaultSpawnPointName");
     }
 }
