@@ -1,10 +1,11 @@
 using System;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public int PlayerHealth { get; set; }
+    public GameObject NextSpawnPoint { get; private set; }
 
     public bool canAttack { get; private set; } = false;
 
@@ -40,5 +41,10 @@ public class GameManager : MonoBehaviour
     public void EnableAttack(bool value)
     {
         canAttack = value;
+    }
+    public void TransitionToScene(string sceneName, string spawnPointName)
+    {
+        PlayerPrefs.SetString("NextSpawnPoint", spawnPointName);
+        SceneManager.LoadScene(sceneName);
     }
 }

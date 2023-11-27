@@ -14,6 +14,13 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         Application.targetFrameRate = 60;
+
+        string spawnPointName = PlayerPrefs.GetString("NextSpawnPoint", "DefaultSpawnPointName");
+        GameObject spawnPoint = GameObject.Find(spawnPointName);
+        if (spawnPoint != null)
+        {
+            transform.position = spawnPoint.transform.position;
+        }
     }
 
     private void Update()

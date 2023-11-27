@@ -20417,13 +20417,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1752773443344942412, guid: 0941150580fa8dc4cbd3bb9879a0b9be, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 2592345360706798184, guid: 0941150580fa8dc4cbd3bb9879a0b9be, type: 3}
       propertyPath: levelToLoad
       value: ClockTower
       objectReference: {fileID: 0}
+    - target: {fileID: 2592345360706798184, guid: 0941150580fa8dc4cbd3bb9879a0b9be, type: 3}
+      propertyPath: sceneToLoad
+      value: ClockTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592345360706798184, guid: 0941150580fa8dc4cbd3bb9879a0b9be, type: 3}
+      propertyPath: nextSpawnPointName
+      value: ClockTower
+      objectReference: {fileID: 0}
     - target: {fileID: 4757529925453021655, guid: 0941150580fa8dc4cbd3bb9879a0b9be, type: 3}
       propertyPath: m_Name
-      value: LevelChanger
+      value: StreetsExit
       objectReference: {fileID: 0}
     - target: {fileID: 8099057810119333678, guid: 0941150580fa8dc4cbd3bb9879a0b9be, type: 3}
       propertyPath: m_LocalScale.x
@@ -20435,7 +20447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8099057810119333678, guid: 0941150580fa8dc4cbd3bb9879a0b9be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 62.14
+      value: 58.57
       objectReference: {fileID: 0}
     - target: {fileID: 8099057810119333678, guid: 0941150580fa8dc4cbd3bb9879a0b9be, type: 3}
       propertyPath: m_LocalPosition.y
