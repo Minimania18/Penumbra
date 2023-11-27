@@ -4,7 +4,7 @@ public class PlayerAttack : MonoBehaviour
 {
     public Animator animator;
     public Collider2D attackHitbox;
-    public int attackDamage = 20;
+    public int attackDamage = 0;
 
     void Start()
     {

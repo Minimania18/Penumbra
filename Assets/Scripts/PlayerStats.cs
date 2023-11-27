@@ -16,11 +16,6 @@ public class PlayerStats : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            // Call TakeDamage with a fixed damage amount, e.g., 1
-            TakeDamage(1);
-        }
         if (Input.GetKeyDown(KeyCode.PageUp))
         {
             Heal(1);

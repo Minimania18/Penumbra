@@ -4,6 +4,7 @@ public class Enemy : MonoBehaviour
 {
     public GameObject bloodEffect;
     public int health = 100;
+    public int attackDamage = 1;
 
     public void TakeDamage(int damageAmount)
     {
@@ -24,6 +25,18 @@ public class Enemy : MonoBehaviour
             if (health <= 0)
             {
                 Die();
+            }
+        }
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerStats playerStats = collision.gameObject.GetComponent<PlayerStats>();
+            if (playerStats != null)
+            {
+                playerStats.TakeDamage(attackDamage);
+                Debug.Log("Player hit by enemy. Player health: " + playerStats.GetCurrentHealth());
             }
         }
     }
