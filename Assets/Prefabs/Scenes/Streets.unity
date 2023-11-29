@@ -147,12 +147,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8669096}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.31, y: -1.4, z: 0.08162349}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.5, y: 0, z: 0.16324697}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 375911877}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &184168538 stripped
 RectTransform:
@@ -18760,7 +18760,9 @@ Transform:
   m_LocalPosition: {x: 20.06, y: -1.4, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 1537227509}
+  - {fileID: 8669097}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &375911878
@@ -19616,12 +19618,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537227508}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.46, y: -1.4, z: 0.08162349}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.199999, y: 0, z: 0.16324697}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 375911877}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1548887771
 GameObject:
@@ -21078,11 +21080,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5231805691490384757, guid: c6d35c45ea90cd543ab12fe480965281, type: 3}
       propertyPath: m_Size.y
-      value: 2.9233358
+      value: 3.5014956
       objectReference: {fileID: 0}
     - target: {fileID: 5231805691490384757, guid: c6d35c45ea90cd543ab12fe480965281, type: 3}
       propertyPath: m_Offset.y
-      value: -0.09580886
+      value: -0.38488907
       objectReference: {fileID: 0}
     - target: {fileID: 5766580194898647830, guid: c6d35c45ea90cd543ab12fe480965281, type: 3}
       propertyPath: m_Layer
@@ -21193,7 +21195,5 @@ SceneRoots:
   - {fileID: 783069257}
   - {fileID: 600280248}
   - {fileID: 2031586323}
-  - {fileID: 1537227509}
-  - {fileID: 8669097}
   - {fileID: 403623004}
   - {fileID: 2105522656}
