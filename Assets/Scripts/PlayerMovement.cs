@@ -9,6 +9,11 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private bool isFacingRight = true;
 
+    public LayerMask groundLayer;
+    public bool isGrounded;
+    private int framesSinceGrounded;
+    private const int FALL_DELAY_FRAMES = 3; // Number of frames to delay the fall check
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -22,12 +27,36 @@ public class PlayerMovement : MonoBehaviour
             transform.position = spawnPoint.transform.position;
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            isGrounded = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            isGrounded = false;
+        }
+    }
 
     private void Update()
     {
         float moveX = Input.GetAxis("Horizontal");
         float movey = Input.GetAxis("Vertical");
         rb.velocity = new Vector2(moveX * moveSpeed, rb.velocity.y);
+
+        if (!isGrounded)
+        {
+            framesSinceGrounded++;
+        }
+        else
+        {
+            framesSinceGrounded = 0;
+        }
 
         if (moveX > 0 && !isFacingRight)
         {
@@ -64,6 +93,31 @@ public class PlayerMovement : MonoBehaviour
             //ResetSpawnPointToDefault();
             SceneManager.LoadScene("Menu");
         }
+        // Trigger Jump Animation
+        if (IsJumping())
+        {
+            animator.SetBool("isJumping", true);
+            animator.SetBool("isFalling", false);
+        }
+        // Trigger Fall Animation
+        else if (IsFalling())
+        {
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", true);
+        }
+        else
+        {
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", false);
+        }
+    }
+    private bool IsJumping()
+    {
+        return rb.velocity.y > 0.3f; // 0.1f is a threshold to avoid floating point imprecision
+    }
 
+    private bool IsFalling()
+    {
+        return !isGrounded && framesSinceGrounded > FALL_DELAY_FRAMES; //rb.velocity.y < -0.3f
     }
 }

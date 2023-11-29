@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player Stab
+  m_Name: Jump
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,11 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 598204318, guid: 6e1be9e65b74aee469f9ec085596c516, type: 3}
+      value: {fileID: 265115247, guid: eeb41ce91af96654c88cd5e41b2499e7, type: 3}
     - time: 0.083333336
-      value: {fileID: -1280153304, guid: 6e1be9e65b74aee469f9ec085596c516, type: 3}
+      value: {fileID: 1243126089, guid: eeb41ce91af96654c88cd5e41b2499e7, type: 3}
     - time: 0.16666667
-      value: {fileID: -1495396802, guid: 6e1be9e65b74aee469f9ec085596c516, type: 3}
+      value: {fileID: -1904929138, guid: eeb41ce91af96654c88cd5e41b2499e7, type: 3}
+    - time: 0.25
+      value: {fileID: 1329985666, guid: eeb41ce91af96654c88cd5e41b2499e7, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,15 +50,16 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 598204318, guid: 6e1be9e65b74aee469f9ec085596c516, type: 3}
-    - {fileID: -1280153304, guid: 6e1be9e65b74aee469f9ec085596c516, type: 3}
-    - {fileID: -1495396802, guid: 6e1be9e65b74aee469f9ec085596c516, type: 3}
+    - {fileID: 265115247, guid: eeb41ce91af96654c88cd5e41b2499e7, type: 3}
+    - {fileID: 1243126089, guid: eeb41ce91af96654c88cd5e41b2499e7, type: 3}
+    - {fileID: -1904929138, guid: eeb41ce91af96654c88cd5e41b2499e7, type: 3}
+    - {fileID: 1329985666, guid: eeb41ce91af96654c88cd5e41b2499e7, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.25
+    m_StopTime: 0.33333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -75,18 +78,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0
-    functionName: ActivateHitbox
-    data: 
-    objectReferenceParameter: {fileID: 11500000, guid: 1e7d6a18a276e2a469a4320b71ab6a54, type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.16666667
-    functionName: DeactivateHitbox
-    data: 
-    objectReferenceParameter: {fileID: 11500000, guid: 1e7d6a18a276e2a469a4320b71ab6a54, type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []
