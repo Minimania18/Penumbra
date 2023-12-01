@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     public bool isGrounded;
     private int framesSinceGrounded;
     private const int FALL_DELAY_FRAMES = 3; // Number of frames to delay the fall check
+    public AudioSource runningSound;
+    //private float footstepDelay = 0.5f; // Delay between footsteps in seconds
+    //private float footstepTimer = 0;
 
     private void Start()
     {
@@ -67,14 +70,26 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
 
-   
-        if (Mathf.Abs(moveX) > 0.0001f)  
+
+        if (Mathf.Abs(moveX) > 0.0001f && isGrounded)
         {
             animator.SetBool("isRunning", true);
+            /*
+            if (!runningSound.isPlaying)  // Check if the sound is not already playing
+            {
+                runningSound.Play();  // Play the running sound
+            }
+            */
         }
         else
         {
             animator.SetBool("isRunning", false);
+            /*
+            if (runningSound.isPlaying)
+            {
+                runningSound.Stop();  // Stop the running sound
+            }
+            */
         }
 
   
