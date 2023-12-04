@@ -8,12 +8,15 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private bool isFacingRight = true;
+    private bool wasInAir = false;
 
     public LayerMask groundLayer;
     public bool isGrounded;
     private int framesSinceGrounded;
-    private const int FALL_DELAY_FRAMES = 3; // Number of frames to delay the fall check
+    private const int FALL_DELAY_FRAMES = 4; // Number of frames to delay the fall check
     public AudioSource runningSound;
+    public AudioSource audioSource;
+    public AudioClip landingSound;
     //private float footstepDelay = 0.5f; // Delay between footsteps in seconds
     //private float footstepTimer = 0;
 
@@ -91,8 +94,18 @@ public class PlayerMovement : MonoBehaviour
             }
             */
         }
+        if (!isGrounded)
+        {
+            wasInAir = true;
+        }
 
-  
+        if (isGrounded && wasInAir)
+        {
+            audioSource.PlayOneShot(landingSound);
+            wasInAir = false;
+        }
+
+
         void Flip()
         {
             isFacingRight = !isFacingRight; 

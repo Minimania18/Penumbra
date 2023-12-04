@@ -13,7 +13,8 @@ public class Jumping : MonoBehaviour
     public float lowJumpMultiplier = 2f;
     public float jumpVelocity = 10f;
     public float maxFallSpeed = -10f;
-
+    public AudioSource audioSource;
+    public AudioClip jumpSound;
 
     void Start()
     {
@@ -33,6 +34,11 @@ public class Jumping : MonoBehaviour
         {
             // Set the initial jump velocity
             rb.velocity = new Vector2(rb.velocity.x, jumpVelocity);
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
+            audioSource.PlayOneShot(jumpSound);
         }
 
         if (rb.velocity.y < 0 || (rb.velocity.y > 0 && !Input.GetButton("Jump")))

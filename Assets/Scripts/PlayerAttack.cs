@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip swishSound;
     public Animator animator;
     public Collider2D attackHitbox;
     public int attackDamage = 0;
@@ -23,7 +25,7 @@ public class PlayerAttack : MonoBehaviour
     private void Attack()
     {
         animator.SetTrigger("Attack");
-
+        audioSource.PlayOneShot(swishSound);
     }
 
 
