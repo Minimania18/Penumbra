@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     public bool isGrounded;
     private int framesSinceGrounded;
+    public Transform groundCheckPoint;
+    public float groundCheckRadius = 0.2f;
     private const int FALL_DELAY_FRAMES = 4; // Number of frames to delay the fall check
     public AudioSource runningSound;
     public AudioSource audioSource;
@@ -38,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             isGrounded = true;
+            Debug.Log("Player is grounded");
         }
     }
 
@@ -46,14 +49,18 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             isGrounded = false;
+            Debug.Log("Player is NOT grounded");
+
         }
     }
 
     private void Update()
     {
+        isGrounded = IsGrounded();
         float moveX = Input.GetAxis("Horizontal");
         float movey = Input.GetAxis("Vertical");
         rb.velocity = new Vector2(moveX * moveSpeed, rb.velocity.y);
+
 
         if (!isGrounded)
         {
@@ -114,7 +121,6 @@ public class PlayerMovement : MonoBehaviour
             playerScale.x *= -1; 
             transform.localScale = playerScale;
         }
-
         //loads menu if esc is pressed
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -148,4 +154,9 @@ public class PlayerMovement : MonoBehaviour
     {
         return !isGrounded && framesSinceGrounded > FALL_DELAY_FRAMES; //rb.velocity.y < -0.3f
     }
+    private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
+    }
+
 }

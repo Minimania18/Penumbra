@@ -4,6 +4,7 @@ public class PlayerAttack : MonoBehaviour
 {
     public AudioSource audioSource;
     public AudioClip swishSound;
+    public AudioClip enemyHitSound;
     public Animator animator;
     public Collider2D attackHitbox;
     public int attackDamage = 0;
@@ -38,16 +39,19 @@ public class PlayerAttack : MonoBehaviour
     public void DeactivateHitbox()
     {
         attackHitbox.enabled = false;
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy") && attackHitbox.enabled)
         {
             Enemy enemy = collision.GetComponent<Enemy>();
             if (enemy != null)
             {
                 enemy.TakeDamage(attackDamage);
+                audioSource.PlayOneShot(enemyHitSound);
+                Debug.Log("Player hit enemy");
             }
         }
     }
