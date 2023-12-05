@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prefabs/Scenes/Instructions.unity
     guid: eb6a213c8b547154bbcdef19bcca3ea7
+  - enabled: 1
+    path: Assets/Prefabs/Scenes/Village.unity
+    guid: 44c3933a1272e15488198ec635bf94a3
   m_configObjects: {}

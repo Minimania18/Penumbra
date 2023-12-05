@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
 
         // Fade in
-        yield return StartCoroutine(Fade(0));
+        //yield return StartCoroutine(Fade(0));
     }
 
     private IEnumerator Fade(float targetAlpha)

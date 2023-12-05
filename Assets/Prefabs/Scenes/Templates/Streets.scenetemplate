@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13966, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Template
+  m_Name: Streets
   m_EditorClassIdentifier: 
   templateScene: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
   templateName: 
@@ -43,9 +43,9 @@ MonoBehaviour:
     instantiationMode: 1
   - dependency: {fileID: 7754462627197716584, guid: 13d94004e6ad40d469ec4532e45150ca, type: 3}
     instantiationMode: 0
-  - dependency: {fileID: 2800000, guid: edbee102365827947899a9718c932ead, type: 3}
-    instantiationMode: 0
   - dependency: {fileID: 2800000, guid: f4f0d21e08b241e409460033a120aa47, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: edbee102365827947899a9718c932ead, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 2800000, guid: b03dcf222f9027440b5dca9e662a25ee, type: 3}
     instantiationMode: 0
