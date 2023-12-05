@@ -1165,6 +1165,7 @@ GameObject:
   - component: {fileID: 1670243875}
   - component: {fileID: 1670243877}
   - component: {fileID: 1670243876}
+  - component: {fileID: 1670243878}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1211,12 +1212,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Credits:
-
-
-    Me
-
-    Assets TBA'
+  m_text: "Credits:\n\nEverything Besides Listed Assets : Nicholas Foster\n\nAssets:
+    \n\nHearts : https://fishxels.itch.io/hearts-n-bars\n\nSky Background : https://free-game-assets.itch.io/free-sky-with-clouds-background-pixel-art-set\n\nTown
+    Background : https://itch.io/queue/c/313331/gothicvania?game_id=176763\n\nMain
+    Character (modified) :https://penzilla.itch.io/hooded-protagonist\n\nSlime: https://szadiart.itch.io/hero-and-opponents-animation\n\nDungeon
+    Tiles: https://incolgames.itch.io/dungeon-platformer-tile-set-pixel-art\n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1243,8 +1243,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.2
-  m_fontSizeBase: 27.2
+  m_fontSize: 18.23
+  m_fontSizeBase: 18.23
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1293,6 +1293,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670243874}
   m_CullTransparentMesh: 1
+--- !u!114 &1670243878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670243874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 359c9553cf10cd641a3c779264b761e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollSpeed: 30
+  creditsText: {fileID: 1670243876}
 --- !u!1 &1701215251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,7 +1504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.066037714, g: 0.066037714, b: 0.066037714, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

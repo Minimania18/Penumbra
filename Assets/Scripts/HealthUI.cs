@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HealthUI : MonoBehaviour
 {
-    public Animator[] heartAnimators; // Array of heart Animators
+    public Animator[] heartAnimators;
     public Sprite halfHeartSprite;
     public void UpdateHealth(int currentHealth)
     {
